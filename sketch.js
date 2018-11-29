@@ -6,19 +6,19 @@ var thslider, eButton, mButton;												// UI elements
 
 function setup() {																	// setup
 																											// basic stuff
-	createCanvas(800, 700);							// canvas
+	createCanvas(1400, 700);							// canvas
 	background(0);
 	rectMode(CENTER);																			// draw modes
 	ellipseMode(RADIUS);
 	angleMode(DEGREES);
 																											// define variables
-	xc = 800/2;																		// distance/position
+	xc = 1400/2;																		// distance/position
 	yc = 700/2;
 	er = 700/2;
 	xs = [];
 	ys = [];
 	for(var i = 1; i < 1001; i++) {													// define star position datasets
-		xs[i] = random(800);
+		xs[i] = random(width);
 		ys[i] = random(700);
 	}
 	Tcount = 0;																						// time
@@ -42,7 +42,7 @@ function draw() {																		// draw function
 																											// update variables
 	Tcount = Tcount+1;																		// time
 	Lcount = Lcount+(Lstep*Ldirection*.5);								// lander stats
-	if(Lcount > (800-(3*er/2)) || Lcount < 0) {
+	if(Lcount > (width-(3*er/2)) || Lcount < 0) {
 		Ldirection = Ldirection*-1;
 	}
 	lunarsling();
@@ -53,7 +53,7 @@ function draw() {																		// draw function
 		star(xs[i], ys[i]);
 	}
 	earth(0, yc)
-	mars(800, yc)
+	mars(width, yc)
 	moon((3*er/2)*cos((Tcount*.2)%360), yc+(3*er/2)*sin((Tcount*.2)%360))
 	lander(er+Lcount, yc)
 	UI(xc)
@@ -156,7 +156,7 @@ function stat() {
 	if (Lcount < 0) {
 		payload = 'full'
 	}
-	if (Lcount > (800-(3*er/2)) && payload == 'full') {
+	if (Lcount > (width-(3*er/2)) && payload == 'full') {
 		day = 0
 		payload = 'empty'
 	}
