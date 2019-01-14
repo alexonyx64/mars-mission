@@ -169,8 +169,8 @@ function UI(X) {
 	
 	noStroke()
 	fill(255)
-	textSize(20)
+	textSize(18)
 	text('throttle: '+thslider.value(), X+240, 30);
-	text('payload '+payload, X-410, 30);
-	text(day+' days since last supply drop', X-410, 60);
+	text('payload '+payload, 10, 30);
+	text(day+' days since last supply drop', 10, 60);
 }
