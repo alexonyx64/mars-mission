@@ -6,20 +6,20 @@ var thslider, eButton, mButton;												// UI elements
 
 function setup() {																	// setup
 																											// basic stuff
-	createCanvas(1000, 700);							// canvas
+	createCanvas(800, 700);							// canvas
 	background(0);
 	rectMode(CENTER);																			// draw modes
 	ellipseMode(RADIUS);
 	angleMode(DEGREES);
 																											// define variables
-	xc = 1400/2;																		// distance/position
-	yc = 700/2;
-	er = 700/2;
+	xc = width/2;																		// distance/position
+	yc = height/2;
+	er = height/2;
 	xs = [];
 	ys = [];
 	for(var i = 1; i < 1001; i++) {													// define star position datasets
 		xs[i] = random(width);
-		ys[i] = random(700);
+		ys[i] = random(height);
 	}
 	Tcount = 0;																						// time
 	day = 180;
