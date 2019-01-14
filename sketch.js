@@ -6,7 +6,7 @@ var thslider, eButton, mButton;												// UI elements
 
 function setup() {																	// setup
 																											// basic stuff
-	createCanvas(1400, 700);							// canvas
+	createCanvas(1000, 700);							// canvas
 	background(0);
 	rectMode(CENTER);																			// draw modes
 	ellipseMode(RADIUS);
